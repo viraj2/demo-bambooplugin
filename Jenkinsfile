@@ -7,13 +7,12 @@ node {
         checkout scm
     }
     stage('Build') {    
+		def atlsa-mvn= tool 'atlsa-mvn'
            if (isUnix()) {
-				sh "mvn compile"
-				sh "atlas-mvn package"
+				sh "'${atlas-mvn}/bin/mvn' package"
 			}
 			else{
-				bat "mvn compile"
-				bat "atlas-mvn package"
+				bat "'${atlas-mvn}/bin/mvn' package"
 		   }	
     }
 }
