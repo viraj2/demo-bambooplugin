@@ -9,11 +9,11 @@ node {
     stage('Build') {    
            if (isUnix()) {
 				sh "mvn compile"
-				sh "mvn atlas-package"
+				sh "atlas-mvn package"
 			}
 			else{
 				bat "mvn compile"
-				bat "mvn atlas-package"
+				bat "atlas-mvn package"
 		   }	
     }
 }
