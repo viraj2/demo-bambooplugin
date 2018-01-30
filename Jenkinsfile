@@ -9,10 +9,10 @@ node {
     stage('Build') {    
 			atlas= tool 'atlas-mvn'
            if (isUnix()) {
-				sh "${atlas}/bin/atlas-package"
+				sh "${atlas}/bin/mvn package"
 			}
 			else{
-				bat "${atlas}\\bin\\atlas-package"
+				bat "${atlas}\\bin\\mvn package"
 		   }	
     }
 }
