@@ -1,5 +1,5 @@
 node {
-   def atlas-mvn
+   def atlas
    stage('Clean') {
         deleteDir()
     }
@@ -7,12 +7,12 @@ node {
         checkout scm
     }
     stage('Build') {    
-			atlsa-mvn= tool 'atlsa-mvn'
+			atlas= tool 'atlsa-mvn'
            if (isUnix()) {
-				sh "'${atlas-mvn}/bin/mvn' package"
+				sh "'${atlas}/bin/mvn' package"
 			}
 			else{
-				bat "'${atlas-mvn}/bin/mvn' package"
+				bat "'${atlas}/bin/mvn' package"
 		   }	
     }
 }
