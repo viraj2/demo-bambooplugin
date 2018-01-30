@@ -12,7 +12,7 @@ node {
 				sh "${atlas}/bin/atlas-package"
 			}
 			else{
-				bat "${atlas}\bin\atlas-package"
+				bat "${atlas}\\bin\\atlas-package"
 		   }	
     }
 }
