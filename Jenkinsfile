@@ -7,7 +7,7 @@ node {
         checkout scm
     }
     stage('Build') {    
-			atlas= tool 'atlsa-mvn'
+			atlas= tool 'atlas-mvn'
            if (isUnix()) {
 				sh "'${atlas}/bin/mvn' package"
 			}
